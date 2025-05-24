@@ -133,6 +133,82 @@
       "Add soy sauce and sesame oil, toss to coat.",
       "Serve hot with rice or noodles."
     ]
+  },
+  {
+    "id": 7,
+    "slug": "avocado-toast",
+    "title": "Avocado Toast",
+    "image": "avocado-toast.jpg",
+    "ingredients": [
+      "2 slices whole grain bread",
+      "1 ripe avocado",
+      "Salt and pepper to taste",
+      "1 tsp lemon juice",
+      "Red chili flakes (optional)",
+      "Olive oil (optional)"
+    ],
+    "steps": [
+      "Toast the bread slices until golden brown.",
+      "Mash the avocado with lemon juice, salt, and pepper.",
+      "Spread the mashed avocado evenly on the toasted bread.",
+      "Sprinkle red chili flakes and drizzle olive oil if desired.",
+      "Serve immediately."
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "chocolate-chip-cookies",
+    "title": "Chocolate Chip Cookies",
+    "image": "chocolate-chip-cookies.jpg",
+    "ingredients": [
+      "1 cup unsalted butter, softened",
+      "1 cup white sugar",
+      "1 cup brown sugar",
+      "2 eggs",
+      "2 tsp vanilla extract",
+      "3 cups all-purpose flour",
+      "1 tsp baking soda",
+      "1/2 tsp salt",
+      "2 cups chocolate chips"
+    ],
+    "steps": [
+      "Preheat oven to 350°F (175°C).",
+      "Cream together the butter and sugars until smooth.",
+      "Beat in eggs one at a time, then stir in vanilla.",
+      "Combine flour, baking soda, and salt; gradually stir into the creamed mixture.",
+      "Fold in chocolate chips.",
+      "Drop by rounded spoonfuls onto ungreased baking sheets.",
+      "Bake 8-10 minutes or until edges are nicely browned.",
+      "Cool on wire racks."
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "beef-stew",
+    "title": "Hearty Beef Stew",
+    "image": "beef-stew.jpg",
+    "ingredients": [
+      "1 kg beef chuck, cut into cubes",
+      "3 tbsp flour",
+      "2 tbsp vegetable oil",
+      "1 onion, chopped",
+      "3 carrots, sliced",
+      "3 potatoes, cubed",
+      "2 cloves garlic, minced",
+      "4 cups beef broth",
+      "1 cup red wine (optional)",
+      "2 tsp thyme",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Coat beef cubes in flour.",
+      "Heat oil in a pot and brown the beef on all sides.",
+      "Add onion and garlic, cook until softened.",
+      "Pour in beef broth and wine, bring to a boil.",
+      "Add carrots, potatoes, thyme, salt, and pepper.",
+      "Simmer for 1.5 to 2 hours until beef is tender.",
+      "Serve hot with crusty bread."
+    ]
   }
   
 ]
