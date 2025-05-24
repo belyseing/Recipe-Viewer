@@ -1,28 +1,29 @@
 # Recipe Viewer App
+
 ## Overview
+
 This is a small recipe viewer application built with Next.js and TypeScript. It showcases a collection of recipes using dynamic routing for individual recipe pages and static site generation (SSG) for optimal performance. The app provides a clean and responsive interface to browse recipes, view details, and navigate seamlessly.
 
 ## Features
-- Dynamic Routing: Each recipe has its own page, accessible.
 
+- **Dynamic Routing**: Each recipe has its own page, accessible.
 
-- Static Site Generation (SSG): Recipe pages are pre-rendered at build time for fast loading and SEO benefits.
+- **Static Site Generation (SSG)**: Recipe pages are pre-rendered at build time for fast loading and SEO benefits.
 
+- **Responsive Design**: The app is optimized for both desktop and mobile devices.
 
-- Responsive Design: The app is optimized for both desktop and mobile devices.
+- **TypeScript**: Ensures type safety and better developer experience.
 
+- **Recipe Data**: Displays recipe details such as name, ingredients and steps.
 
-- TypeScript: Ensures type safety and better developer experience.
-
-
-- Recipe Data: Displays recipe details such as name, ingredients and steps.
+-  **User Authentication:** Added secure user authentication to manage access and enhance user experience.
 
 ## Tech Stack
 
-- Next.js: React framework for server-side rendering and static site generation.
+- **Next.js**: React framework for server-side rendering and static site generation.
 
+- **TypeScript**: Adds static types to JavaScript for improved code reliability.
+- User Authentication Added secure user authentication to manage access and enhance user experience.
 
-- TypeScript: Adds static types to JavaScript for improved code reliability.
-
-
-- Tailwind CSS: For styling the components.
+- **Tailwind CSS**: For styling the components.
+- **Authentication:** Uses secure authentication mechanism for user login and session handling.
