@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: 'Recipe Vault',
+  title: 'Flavor Haven',
   description: 'Access premium recipes from world-renowned chefs',
 };
 

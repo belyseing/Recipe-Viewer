@@ -78,7 +78,7 @@ export default function Home() {
       <SignedIn>
         <main className="px-4 py-8">
           <div className="relative flex items-center mb-12">
-            {/* Red big text div */}
+           
             <div className="w-[700px] h-40 bg-gradient-to-r from-black rounded-r-full p-4 relative z-0 flex items-center justify-center">
          <p className="text-2xl font-bold text-white drop-shadow mb-2 text-center">
          Welcome to Flavor Haven!
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="relative w-96 h-96 rounded-full overflow-hidden -ml-20 flex-shrink-0 z-10">
             </div>
 
-            {/* Two small images */}
+           
             <div className="flex flex-col justify-between ml-4 w-40 h-[400px]">
               <div className="relative w-full h-40 rounded-full overflow-hidden border-2 border-white shadow-lg">
                 <Image
@@ -113,7 +113,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-7xl mx-auto">
-            <h1 className="pt-6 font-bold text-6xl pb-10 text-orange-500  font-serif">
+            <h1 className="font-bold text-6xl pb-6 text-orange-500  font-serif">
               Recipe List
             </h1>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -126,8 +126,8 @@ export default function Home() {
                     href={`/recipes/${recipe.slug}`}
                     className="block h-full p-4"
                   >
-                    <div className="flex items-center gap-6">
-                      <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-orange-400 flex-shrink-0">
+                    <div className="flex items-center gap-6 ">
+                      <div className="relative  w-32 h-32 rounded-full overflow-hidden border-4 border-orange-400 flex-shrink-0">
                         <Image
                           src={`/images/${recipe.image}`}
                           alt={recipe.title}
