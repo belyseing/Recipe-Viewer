@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="p-6 bg-gradient-to-r from-gray-700 to-gray-900 shadow-xl flex justify-between items-center ">
       <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-      Flavor Haven!
+      Flavor Haven
       </h1>
 
       <div className="flex items-center space-x-3">

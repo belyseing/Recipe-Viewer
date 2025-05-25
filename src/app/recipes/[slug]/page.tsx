@@ -2,13 +2,11 @@ import recipes from '@/data/recipes.json';
 import Image from 'next/image';
 import Link from 'next/link';
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function RecipePage({ params }: Props) {
+export default async function RecipePage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const { slug } = params;
   const recipe = recipes.find((r) => r.slug === slug);
 
@@ -26,8 +24,10 @@ export default async function RecipePage({ params }: Props) {
   }
 
   return (
-    <main className="min-h-screenpb-16" 
-    style={{ backgroundImage: "url('/images/background.jpg')" }}>
+    <main
+      className="min-h-screen pb-16"
+      style={{ backgroundImage: "url('/images/background.jpg')" }}
+    >
       <div className="max-w-4xl mx-auto px-4 py-8">
         <Link
           href="/"
