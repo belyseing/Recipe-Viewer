@@ -2,13 +2,25 @@ import recipes from '@/data/recipes.json';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default async function RecipePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = params;
-  const recipe = recipes.find((r) => r.slug === slug);
+// Define the shape of a Recipe for TS
+interface Recipe {
+  slug: string;
+  title: string;
+  image: string;
+  ingredients: string[];
+  steps: string[];
+}
+
+// Props type for Next.js page route
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function RecipePage({ params }: PageProps | { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const recipe = recipes.find((r: Recipe) => r.slug === slug);
 
   if (!recipe) {
     return (
