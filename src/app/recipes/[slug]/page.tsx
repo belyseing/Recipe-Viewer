@@ -2,7 +2,6 @@ import recipes from '@/data/recipes.json';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Define the shape of a Recipe for TS
 interface Recipe {
   slug: string;
   title: string;
@@ -11,15 +10,16 @@ interface Recipe {
   steps: string[];
 }
 
-// Props type for Next.js page route
 interface PageProps {
   params: {
     slug: string;
-  };
+  } | Promise<{ slug: string }>;
 }
 
-export default async function RecipePage({ params }: PageProps | { params: Promise<{ slug: string }> }) {
+export default async function RecipePage({ params }: PageProps) {
+  // Await params in case it is a Promise
   const { slug } = await params;
+
   const recipe = recipes.find((r: Recipe) => r.slug === slug);
 
   if (!recipe) {
@@ -36,10 +36,7 @@ export default async function RecipePage({ params }: PageProps | { params: Promi
   }
 
   return (
-    <main
-      className="min-h-screen pb-16"
-      style={{ backgroundImage: "url('/images/background.jpg')" }}
-    >
+    <main className="min-h-screen pb-16" style={{ backgroundImage: "url('/images/background.jpg')" }}>
       <div className="max-w-4xl mx-auto px-4 py-8">
         <Link
           href="/"
