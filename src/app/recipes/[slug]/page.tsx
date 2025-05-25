@@ -1,6 +1,7 @@
 import recipes from '@/data/recipes.json';
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 interface Recipe {
   slug: string;
@@ -11,28 +12,19 @@ interface Recipe {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  } | Promise<{ slug: string }>;
+  }>;
 }
 
+// Make the component async to await params
 export default async function RecipePage({ params }: PageProps) {
-  // Await params in case it is a Promise
+  // Await the params to resolve the Promise
   const { slug } = await params;
-
   const recipe = recipes.find((r: Recipe) => r.slug === slug);
 
   if (!recipe) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-amber-50">
-        <div className="bg-white p-8 rounded-lg shadow-md">
-          <h1 className="text-2xl font-bold text-red-600">Recipe not found</h1>
-          <Link href="/" className="mt-4 inline-block text-amber-600 hover:text-amber-800 font-medium">
-            ← Back to Recipes
-          </Link>
-        </div>
-      </div>
-    );
+    notFound(); // Triggers 404 page
   }
 
   return (
