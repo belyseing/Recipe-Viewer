@@ -1,9 +1,17 @@
 import recipes from '@/data/recipes.json';
 import Image from 'next/image';
 import Link from 'next/link';
+// This imports a helper function called notFound() from Next.js.
+// If something isn’t found (like a missing recipe), you can call notFound() to show a 404 page 
 import { notFound } from 'next/navigation';
 
 interface Recipe {
+  // A slug is a simple word or phrase that appears in the website address (URL) to identify something.
+
+// For example:
+// In the website address www.myrecipes.com/recipes/chocolate-cake
+// The slug is chocolate-cake
+// It’s like a nickname or label for the recipe in the URL.
   slug: string;
   title: string;
   image: string;
@@ -11,20 +19,24 @@ interface Recipe {
   steps: string[];
 }
 
+// The page must find the recipe with the slug "chocolate-cake" and show it.
 interface PageProps {
+  // Imagine params is a small package with info inside.
   params: Promise<{
     slug: string;
   }>;
 }
 
-// Make the component async to await params
+
+// params holds details from the URL — for example, if the URL is /recipes/chocolate-cake,
+//  params contains "chocolate-cake" as the slug.
 export default async function RecipePage({ params }: PageProps) {
-  // Await the params to resolve the Promise
   const { slug } = await params;
+  // This line is searching through a list of recipes and finding the one that matches the name in the URL (called a "slug"). Once it finds the matching recipe, it saves it into a variable so you can use it and show it on the page.
   const recipe = recipes.find((r: Recipe) => r.slug === slug);
 
   if (!recipe) {
-    notFound(); // Triggers 404 page
+    notFound(); 
   }
 
   return (
